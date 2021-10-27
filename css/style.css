@@ -1,0 +1,285 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    color:inherit;
+    text-decoration: none;
+}
+.wrap{
+    width:940px;
+    height: 140px;
+    margin: 0 auto;
+    position:relative;
+}
+.wrap h1{
+    display: block;
+    position:absolute;
+    top:50px;
+    left:50%;
+    transform: translateX(-50%);
+}
+/* 중간으로 놓을 때 position 정하고 rightXXXXX !!!left!!!
+    h1>>>>> text-align:center 쓰면 됨;;;;;;;;; */
+.wrap .util1{
+    position:absolute;
+    right:0;
+}
+.wrap .util1:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.wrap .util1 li{
+    float:left;
+    font-size:12px;
+    font-weight:bold;
+    color:dimgrey;
+    margin:10px;
+    /* float ul로 지정하면 안되고 !!!!!!!!무조건 li!!!!!!!!!!!!!! */
+}
+.wrap .util2:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.wrap .util2 li{
+    display:block;
+    height:85px;
+    width:125px;
+    float:left;
+}
+.wrap .util2 li:first-child{
+    background-image:url(../images/subutil_1.png);
+    background-repeat: no-repeat;
+    text-indent: -999999px;
+}
+.wrap .util2 li:last-child{
+    background-image:url(../images/subutil_2.png);
+    background-repeat:no-repeat;
+    background-position:top center;
+    margin-top:15px;
+    text-indent: -999999px;
+}
+.wrap .util2 li a{
+    height:85px;
+    width:125px;
+    display:block;
+}
+/* li따로 a따로 지정하는게 맞는건지??????!! */
+.wrap .gnb{
+    position:absolute;
+    top:100px;
+}
+.wrap .gnb:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.wrap .gnb li{
+    float:left;
+    margin-right:60px;
+}
+.wrap .gnb li:first-child{
+    margin-left:60px;
+}
+.wrap .gnb li a{
+    display:block;
+}
+.wrap .gnb li:first-child a{
+    background-image:url(../images/gnb1.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    color:rgba(0,0,0,0)
+}
+.wrap .gnb li:nth-child(2) a{
+    background-image:url(../images/gnb2.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    color:rgba(0,0,0,0);
+}
+.wrap .gnb li:nth-child(3) a{
+    background-image:url(../images/gnb3.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    color:rgba(0,0,0,0);
+}
+.wrap .gnb li:nth-child(4) a{
+    background-image:url(../images/gnb4.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    color:rgba(0,0,0,0);
+}
+.wrap .gnb li:nth-child(5) a{
+    background-image:url(../images/gnb5.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    color:rgba(0,0,0,0);
+}
+.wrap .gnb li:nth-child(6) a{
+    background-image:url(../images/gnb6.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    color:rgba(0,0,0,0);
+}
+/* header영역 */
+.banner{
+    height:480px;
+    background-image:url(../images/mainbn.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    text-indent:-999999px;
+}
+.banner a{
+    height:100%;
+    width: 100%;
+    display: block;
+}
+/* text-indent 왜 a말고 부모에 줘야 되는지???!! */
+/* banner영역 */
+.content{
+    width:940px;
+    height:585px;
+    margin:0 auto;
+    padding:45px 0;
+}
+/* 굳이 position을 줄 필요 없는 구조들은 !!!!절대!!! position 사용 금지
+    float만으로 가로정렬 하기 */
+.content > div{
+    margin-bottom:35px;
+}
+.content .con1{
+    width:940px;
+    height:213px;
+}
+
+.content .con1:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.content .con1 > div{
+    float:left;
+    width:205px;
+    height:213px;
+    margin-right:35px;
+}
+.content .con1 div:last-child{
+    margin-right:0;
+}
+.content .con1 div:first-child div{
+    text-align: center;
+}
+.content .con1 .mall{
+    width:460px;
+}
+.content .con1 .mall div{
+    margin-top:15px;
+    font-size:12px;
+    color:grey;
+}
+
+.content .con1 .mall .menu:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.content .con1 .mall .menu div{
+    float:left;
+    padding:0 30px;
+    background-image:url(../images/bg_bar.png);
+    background-repeat:no-repeat;
+    background-position:right;
+    height:75px;
+    text-align:center;
+    font-size: 12px;
+    color:grey;
+}
+.content .con1 .mall .menu div:last-child{
+    background-image: none;
+}
+.content .con1 .mall .menu div > p{
+    text-align:bottom;
+}
+/* 텍스트와 이미지를 좀 분리시키고 싶으뮤ㅠ
+>>>>>>>>>텍스트를 p로 감싸서 p만 따로 내리기>>>>안됨....... */
+.content .con1 .map div{
+    margin-top:15px;
+    font-size:12px;
+    color:grey;
+}
+/* content영역 - con1 */
+.content .con2{
+    height:213px;
+    width:940px;
+}
+.content .con2:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.content .con2 > div{
+    width: 240px;
+    height:213px;
+    float:left;
+}
+.content .con2 div:nth-child(2){
+    width:460px;
+}
+/* content영역 -con2 */
+.content .con3{
+    width: 930px;
+    height:93px;
+}
+.content .con3:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.content .con3 > div{
+    float:left;
+    width:205px;
+    margin-right:35px;
+    font-size:12px;
+    color:grey;
+}
+.content .con3 div:last-child{
+    margin-right:0;
+}
+.content .con3 div > div{
+    margin-top:15px;
+}
+.content .con3 .news div li{
+    width: 205px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content .con3 .quick{
+    margin:20px 0;
+    background-color: aqua;
+}
+
+.content .con3 .quick:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.content .con3 .quick div{
+    float:left;
+    background-image:url(../images/bg_bar.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: center;
+}
+.content .con3 .quick div:last-child{
+    background-image: none;
+}
+
